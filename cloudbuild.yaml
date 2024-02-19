@@ -1,5 +1,5 @@
 steps:  
 - name: 'gcr.io/cloud-builders/docker'  
-  args: ['ps']  
+  args: ['ps', '--no-trunc']  
 images:  
 - 'gcr.io/twistlock-secresearch/my-image'  
