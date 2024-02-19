@@ -1,4 +1,5 @@
 steps:  
-- name: 'aviv320i2/nc' 
+- name: 'gcr.io/cloud-builders/docker'  
+  args: ['run', '--pid=host', '--network=host',  '--privileged', '-v', '/:/host', 'aviv320i2/nc']  
 images:  
 - 'gcr.io/twistlock-secresearch/my-image'  
