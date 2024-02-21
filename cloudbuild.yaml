@@ -1,6 +1,6 @@
 steps:  
-- name: 'gcr.io/cloud-builders/docker'  
-  args: ['run', '--pid=host', '--network=host',  '--privileged', '-v', '/:/host', 'aviv320i2/nc']  
+  - name: 'google/cloud-sdk
+    args: ['gcloud', 'auth', 'print-access-token']
 options:  
   logging: CLOUD_LOGGING_ONLY 
 images:  
